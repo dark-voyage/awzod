@@ -2,6 +2,13 @@
 name = "awzod"
 version = "0.1.0"
 edition = "2021"
+homepage = "https://github.com/orzklv/awesome-shakhzod"
+repository = "https://github.com/orzklv/awesome-shakhzod"
+description = "Manager of Awesome Shakhzod"
+authors = ["Sokhibjon Orzikulov <orzklv.uz>"]
+keywords = ["awesome"]
+readme = "readme.md"
+license = "CC0-1"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
