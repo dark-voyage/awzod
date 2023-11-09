@@ -9,8 +9,6 @@ Collection of golden quotes spoken by Shakhzod Kudratov a.k.a [@catdevblog](http
 
 ## About
 
-This repository was written on Rust programming language and data is not **submitted directly** to readme.md.  
-
-> We host all contents statically, so you may correct me up by sending a pull request.
+This repository was written on Rust programming language and data is not **submitted directly** to readme.md. We host all contents statically, so you may correct me up by sending a pull request.
 
 <br>
