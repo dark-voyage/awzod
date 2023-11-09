@@ -1,10 +1,14 @@
 use std::path::PathBuf;
 
-pub mod scheme;
-pub mod readme;
 pub mod database;
+pub mod input;
+pub mod readme;
+pub mod scheme;
 
-use clap::{Args, Parser, Subcommand, ValueEnum};
+pub use database::Database;
+pub use readme::Readme;
+
+use clap::{Parser, Subcommand}; // Args
 
 /// A CLI tool to manage golden quotes by Shakhzod Kudratov
 #[derive(Debug, Parser)]
@@ -12,17 +16,17 @@ use clap::{Args, Parser, Subcommand, ValueEnum};
 #[command(about = "A CLI tool to manage golden quotes by Shakhzod Kudratov", long_about = None)]
 pub struct Cli {
     #[command(subcommand)]
-    command: Commands,
+    pub command: Commands,
 }
 
 #[derive(Debug, Subcommand)]
-enum Commands {
+pub enum Commands {
     /// Print out random quote or dialogue
     #[command(arg_required_else_help = true)]
     Random {
         /// Path to a json database
         #[arg(required = true)]
-        path: Option<Vec<PathBuf>>,
+        path: Option<PathBuf>,
     },
 
     /// adds content to dump database
@@ -30,7 +34,7 @@ enum Commands {
     Add {
         /// Path to a json database
         #[arg(required = true)]
-        path: Option<Vec<PathBuf>>,
+        path: Option<PathBuf>,
     },
 
     /// Render a markdown readme for this repo
@@ -38,14 +42,6 @@ enum Commands {
     Render {
         /// Path to a json database
         #[arg(required = true)]
-        path: Option<Vec<PathBuf>>,
+        path: Option<PathBuf>,
     },
-
-    /// Show a markdown file on readme
-    #[command(arg_required_else_help = true)]
-    Markdown {
-        /// Path to a json database
-        #[arg(required = true)]
-        path: Option<Vec<PathBuf>>,
-    }
 }

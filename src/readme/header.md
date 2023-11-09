@@ -1,0 +1,1 @@
+# Shakhzod's Golden quotes
