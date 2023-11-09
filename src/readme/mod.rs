@@ -1,5 +1,6 @@
-use crate::scheme::Content;
-use std::io::{Seek, SeekFrom, Write};
+use crate::scheme::category::Category;
+use crate::scheme::{Content, Markdown};
+use std::io::Write;
 use std::path::PathBuf;
 
 static HEADER: &str = include_str!("header.md");
@@ -29,6 +30,10 @@ impl Readme {
             None => "readme.md".parse().unwrap(),
         };
 
+        if place.exists() {
+            std::fs::remove_file(&place).unwrap();
+        }
+
         let mut file = std::fs::OpenOptions::new()
             .read(true)
             .write(true)
@@ -36,7 +41,6 @@ impl Readme {
             .open(place)
             .unwrap();
 
-        file.seek(SeekFrom::Start(0)).unwrap();
         file.write_all(content.as_bytes())
     }
 
@@ -44,11 +48,15 @@ impl Readme {
         let mut content = self.content.clone();
 
         for category in data.content.iter() {
-            content.push_str(category.to_string().as_str())
+            match category {
+                Category::Quote(q) => content.push_str(format!("{}\n", q.to_blockquote()).as_str()),
+                Category::Dialogue(d) => {
+                    content.push_str(format!("{}\n", d.to_blockquote()).as_str())
+                }
+            }
         }
 
         content.push_str(FOOTER);
-
         Readme::write(content, None).unwrap();
     }
 }

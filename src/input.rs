@@ -2,6 +2,7 @@ use crate::scheme::dialogue::ToDialogue;
 use crate::scheme::quotes::ToQuote;
 use asky::{Select, Text};
 use std::process::exit;
+use colored::*;
 
 use crate::scheme::category::Category;
 
@@ -38,7 +39,7 @@ impl Input {
             "Dialogue" => Selection::Dialogue,
             "Exit" => Selection::Exit,
             _ => {
-                eprintln!("Couldn't parse answer!");
+                eprintln!("{}", "Couldn't parse answer!".red());
                 exit(1)
             }
         }
@@ -50,6 +51,8 @@ impl Input {
     }
 
     pub fn ask_dialogue(&mut self) {
+        let mut answers = String::new();
+
         loop {
             println!("Enter dialogue in format: \"Character: Dialogue\" or empty string to exit.");
             let answer = Text::new("Enter dialogue: ").prompt().unwrap();
@@ -58,8 +61,10 @@ impl Input {
                 break;
             }
 
-            self.content.push(Category::Dialogue(answer.to_dialogue()));
+            answers.push_str(format!("{}\n", answer).as_str());
         }
+
+        self.content.push(Category::Dialogue(answers.to_dialogue()));
     }
 
     pub fn ask(&mut self) {

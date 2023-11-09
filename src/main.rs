@@ -1,6 +1,7 @@
 use awzod::scheme::Colorful;
 use awzod::{Cli, Commands};
 use clap::Parser;
+use colored::*;
 use std::process::exit;
 
 fn main() {
@@ -11,13 +12,13 @@ fn main() {
             let database = awzod::database::Database::from_path_or_binary(path);
             let quote = database.content.random();
 
-            println!("{:?}", quote.to_colorful_string());
+            print!("{}", quote.to_colorful_string());
         }
         Commands::Add { path } => {
             let mut database = match path {
-                Some(c) => awzod::database::Database::from_file(c),
+                Some(c) => awzod::database::Database::from_file_or_new(c),
                 None => {
-                    eprintln!("No path for database given!");
+                    eprintln!("{}", "No path for database given!".red());
                     exit(1)
                 }
             };

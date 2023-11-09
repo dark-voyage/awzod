@@ -1,8 +1,9 @@
-use crate::scheme::Colorful;
+use crate::scheme::{Colorful, Markdown};
 use serde::{Deserialize, Serialize};
 use std::fmt::Display;
+use colored::Colorize;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, PartialEq)]
 pub struct Quote {
     author: String,
     content: String,
@@ -26,7 +27,23 @@ impl Display for Quote {
 
 impl Colorful for Quote {
     fn to_colorful_string(&self) -> String {
-        format!("\"{}\" - {}", self.content, self.author)
+        format!("{yb}{}{yb} - {}", self.content.red(), self.author.yellow(), yb = "\"".red())
+    }
+}
+
+impl Markdown for Quote {
+    fn to_blockquote(&self) -> String {
+        format!(
+            "<blockquote><strong>{}</strong> - <i>{}</i></blockquote>",
+            self.content, self.author
+        )
+    }
+
+    fn to_paragraph(&self) -> String {
+        format!(
+            "<p><strong>{}</strong> - <i>{}</i></p>",
+            self.content, self.author
+        )
     }
 }
 

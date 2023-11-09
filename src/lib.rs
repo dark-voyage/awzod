@@ -22,10 +22,10 @@ pub struct Cli {
 #[derive(Debug, Subcommand)]
 pub enum Commands {
     /// Print out random quote or dialogue
-    #[command(arg_required_else_help = true)]
+    #[command(arg_required_else_help = false)]
     Random {
         /// Path to a json database
-        #[arg(required = true)]
+        #[arg(required = false)]
         path: Option<PathBuf>,
     },
 
