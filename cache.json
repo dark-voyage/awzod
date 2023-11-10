@@ -4,5 +4,29 @@
       "author": "Shakhzod Kudratov",
       "content": "yobanii mrazi"
     }
+  },
+  {
+    "dialogue": {
+      "series": [
+        {
+          "author": "Lead",
+          "content": "ya tebe dam mashinu"
+        },
+        {
+          "author": "Shakhzod",
+          "content": "ya vodit ne umeyu"
+        },
+        {
+          "author": "Lead",
+          "content": "chtob razvarachivat docker..."
+        }
+      ]
+    }
+  },
+  {
+    "quote": {
+      "author": "Shakhzod Kudratov",
+      "content": "Javascript zo'r, php xuynya!"
+    }
   }
 ]

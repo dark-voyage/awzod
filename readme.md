@@ -13,6 +13,13 @@ This repository was written on Rust programming language and data is not **submi
 
 <br>
 <blockquote><strong>yobanii mrazi</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote>
+<p><strong>ya tebe dam mashinu</strong> - <i>Lead</i></p>
+<p><strong>ya vodit ne umeyu</strong> - <i>Shakhzod</i></p>
+<p><strong>chtob razvarachivat docker...</strong> - <i>Lead</i></p>
+</blockquote>
+
+<blockquote><strong>Javascript zo'r, php xuynya!</strong> - <i>Shakhzod Kudratov</i></blockquote>
 <br>
 
 <p align="center">Copyright &copy; 2022-2023 <a href="https://oss.uzinfocom.uz" target="_blank">Uzinfocom Open Source</a></p>
