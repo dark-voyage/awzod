@@ -7,6 +7,7 @@ pub mod scheme;
 
 pub use database::Database;
 pub use readme::Readme;
+pub use input::Input;
 
 use clap::{Parser, Subcommand}; // Args
 
