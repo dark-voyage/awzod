@@ -24,6 +24,17 @@ This repository was written on Rust programming language and data is not **submi
 </blockquote>
 
 <blockquote><strong>Javascript zo'r, php xuynya!</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>u menya popizje</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>zadenail sebya</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>prosto nado pitlorda piknut</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>i ult v konets tunnelya skinut</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>zarandomil</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>stomach needs some beer</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>HACHU</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>PIVACHA</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>mazzami</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>zaybal</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>dayte pokodit</strong> - <i>Shakhzod Kudratov</i></blockquote>
 <br>
 
 <p align="center">Copyright &copy; 2022-2023 <a href="https://oss.uzinfocom.uz" target="_blank">Uzinfocom Open Source</a></p>
