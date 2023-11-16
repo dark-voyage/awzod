@@ -1,5 +1,9 @@
 <header>
-<img src="https://www.maid.uz/assets/misc/quote.svg" alt="logo" height="100" align="left">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/quote-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset=".github/assets/quote-light.svg">
+  <img alt="Quote" height="100" align="left" src=".github/assets/quote-light.svg">
+</picture>
 <h1 style="display: inline">Awesome Shakhzod</h1>
 
 Collection of golden quotes spoken by Shakhzod Kudratov a.k.a [@catdevblog](https://t.me/catdevblog).
