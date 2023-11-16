@@ -1,3 +1,4 @@
+#![allow(clippy::useless_format)]
 #![allow(clippy::manual_split_once)]
 
 use super::quotes::Quote;
@@ -81,5 +82,45 @@ impl ToDialogue for String {
         }
 
         Dialogue { series }
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+    use colored::Colorize;
+
+    #[test]
+    fn test_dialogue() {
+        let dialogue = "Shakhzod Kudratov: Hello, Rust!\nRust: Hello, Shakhzod!"
+            .to_string()
+            .to_dialogue();
+
+        assert_eq!(
+            dialogue.to_string(),
+            "\"Hello, Rust!\" - Shakhzod Kudratov\n\"Hello, Shakhzod!\" - Rust"
+        );
+
+        assert_eq!(
+            dialogue.to_colorful_string(),
+            format!(
+                "{yb}{cnt1}{yb} - {auth1}\n{yb}{cnt2}{yb} - {auth2}",
+                cnt1 = "Hello, Rust!".red(),
+                cnt2 = "Hello, Shakhzod!".red(),
+                auth1 = "Shakhzod Kudratov".yellow(),
+                auth2 = "Rust".yellow(),
+                yb = "\"".red()
+            )
+        );
+
+        assert_eq!(
+            dialogue.to_blockquote(),
+            "<blockquote>\n<p><strong>Hello, Rust!</strong> - <i>Shakhzod Kudratov</i></p>\n<p><strong>Hello, Shakhzod!</strong> - <i>Rust</i></p>\n</blockquote>\n"
+        );
+
+        assert_eq!(
+            dialogue.to_paragraph(),
+            "<p>\n<p><strong>Hello, Rust!</strong> - <i>Shakhzod Kudratov</i></p>\n<p><strong>Hello, Shakhzod!</strong> - <i>Rust</i></p>\n</p>\n"
+        );
     }
 }

@@ -2,8 +2,8 @@ pub mod category;
 pub mod dialogue;
 pub mod quotes;
 
-use colored::*;
 use crate::scheme::category::Category;
+use colored::*;
 use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
 use std::process::exit;

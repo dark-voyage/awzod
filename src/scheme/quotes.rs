@@ -1,7 +1,7 @@
 use crate::scheme::{Colorful, Markdown};
+use colored::Colorize;
 use serde::{Deserialize, Serialize};
 use std::fmt::Display;
-use colored::Colorize;
 
 #[derive(Serialize, Deserialize, PartialEq)]
 pub struct Quote {
@@ -27,7 +27,12 @@ impl Display for Quote {
 
 impl Colorful for Quote {
     fn to_colorful_string(&self) -> String {
-        format!("{yb}{}{yb} - {}", self.content.red(), self.author.yellow(), yb = "\"".red())
+        format!(
+            "{yb}{}{yb} - {}",
+            self.content.red(),
+            self.author.yellow(),
+            yb = "\"".red()
+        )
     }
 }
 
@@ -53,5 +58,34 @@ impl ToQuote for String {
             author: "Shakhzod Kudratov".to_string(),
             content: self.to_string(),
         }
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::Colorful;
+    use super::*;
+
+    #[test]
+    fn test_quote() {
+        let quote = Quote::new("Shakhzod Kudratov".to_string(), "Hello World!".to_string());
+        assert_eq!(quote.to_string(), "\"Hello World!\" - Shakhzod Kudratov");
+        assert_eq!(
+            quote.to_colorful_string(),
+            format!(
+                "{yb}{}{yb} - {}",
+                "Hello World!".red(),
+                "Shakhzod Kudratov".yellow(),
+                yb = "\"".red()
+            )
+        );
+        assert_eq!(
+            quote.to_blockquote(),
+            "<blockquote><strong>Hello World!</strong> - <i>Shakhzod Kudratov</i></blockquote>"
+        );
+        assert_eq!(
+            quote.to_paragraph(),
+            "<p><strong>Hello World!</strong> - <i>Shakhzod Kudratov</i></p>"
+        );
     }
 }

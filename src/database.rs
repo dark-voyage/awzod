@@ -1,10 +1,10 @@
 use crate::scheme::Content;
+use colored::Colorize;
 use std::fs;
 use std::io::Write;
 use std::path::PathBuf;
 use std::process::exit;
 use std::str::FromStr;
-use colored::Colorize;
 
 static BINARY: &str = include_str!("../cache.json");
 

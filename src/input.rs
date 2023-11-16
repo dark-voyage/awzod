@@ -1,8 +1,8 @@
 use crate::scheme::dialogue::ToDialogue;
 use crate::scheme::quotes::ToQuote;
 use asky::{Select, Text};
-use std::process::exit;
 use colored::*;
+use std::process::exit;
 
 use crate::scheme::category::Category;
 
