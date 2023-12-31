@@ -94,5 +94,23 @@
       "author": "Shakhzod Kudratov",
       "content": "dayte pokodit"
     }
+  },
+  {
+    "dialogue": {
+      "series": [
+        {
+          "author": "Shakhzod",
+          "content": "bad news, no beer. good news, we got kolyan..."
+        },
+        {
+          "author": "asobirov",
+          "content": "haram!"
+        },
+        {
+          "author": "Shakhzod",
+          "content": "you telling me this shit after nextjs + yew?"
+        }
+      ]
+    }
   }
 ]
