@@ -35,6 +35,12 @@ This repository was written on Rust programming language and data is not **submi
 <blockquote><strong>mazzami</strong> - <i>Shakhzod Kudratov</i></blockquote>
 <blockquote><strong>zaybal</strong> - <i>Shakhzod Kudratov</i></blockquote>
 <blockquote><strong>dayte pokodit</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote>
+<p><strong>bad news, no beer. good news, we got kolyan...</strong> - <i>Shakhzod</i></p>
+<p><strong>haram!</strong> - <i>asobirov</i></p>
+<p><strong>you telling me this shit after nextjs + yew?</strong> - <i>Shakhzod</i></p>
+</blockquote>
+
 <br>
 
 <p align="center">Copyright &copy; 2022-2023 <a href="https://oss.uzinfocom.uz" target="_blank">Uzinfocom Open Source</a></p>
