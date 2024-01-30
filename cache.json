@@ -112,5 +112,11 @@
         }
       ]
     }
+  },
+  {
+    "quote": {
+      "author": "Shakhzod Kudratov",
+      "content": "i better start using gpg shit rather than nixos"
+    }
   }
 ]
