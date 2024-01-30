@@ -41,7 +41,7 @@ This repository was written on Rust programming language and data is not **submi
 <p><strong>you telling me this shit after nextjs + yew?</strong> - <i>Shakhzod</i></p>
 </blockquote>
 
-<blockquote><strong>i better start using gpg shit rather than nixos</strong> - <i>Shakhzod Kudratov</i></blockquote>
+<blockquote><strong>i better start using chat gpt shit rather than nixos</strong> - <i>Shakhzod Kudratov</i></blockquote>
 <br>
 
 <p align="center">Copyright &copy; 2022-2023 <a href="https://oss.uzinfocom.uz" target="_blank">Uzinfocom Open Source</a></p>
